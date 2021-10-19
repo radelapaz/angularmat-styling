@@ -1,0 +1,25 @@
+<mat-drawer-container class="app-container">
+  <mat-drawer #drawer class="app-sidenav mat-elevation-z8" [mode]="!isScreenSmall ? 'over' : 'side" [opened]="!isScreenSmall">
+    <mat-toolbar color="primary">
+      Contact
+    </mat-toolbar>
+    <mat-list role='list'>
+      <mat-list-item>Sample 1</mat-list-item>
+      <mat-list-item>Sample 2</mat-list-item>
+      <mat-list-item>Sample 3</mat-list-item>
+    </mat-list>
+    <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+  </mat-drawer>
+
+  <div class="app-sidenav-content">
+    <app-toolbar></app-toolbar>
+    <router-outlet></router-outlet>
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container>
